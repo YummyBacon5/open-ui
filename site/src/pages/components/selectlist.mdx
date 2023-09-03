@@ -52,7 +52,7 @@ Because the various parts of the selectlist can be styled, it's important to und
 - `<selectedvalue>` - The element which contains the text of the currently selected option. Every time that the user selects an option, the browser will replace the text content of this element with the text content of the selected option.
 - `<listbox>` - The wrapper that contains the `<option>`(s) and `<optgroup>`(s). If this part was not provided by the author, then `<selectlist>` will automatically create one.
 - `<optgroup>` - Optional element which groups `<option>`(s) together with a label.
-- `<legend>` - The label for an `<optgroup>`. The `label` attribute should not be used.
+- `<legend>` - The label for an `<optgroup>`. This should an `<optgroup>`'s first child. The `label` attribute should not be used.
 - `<option>` - Can have one or more and represents the potential values that can be chosen by the user.
 
 ## Styling selectlist
