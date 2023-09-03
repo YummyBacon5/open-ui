@@ -52,6 +52,7 @@ Because the various parts of the selectlist can be styled, it's important to und
 - `<selectedvalue>` - The element which contains the text of the currently selected option. Every time that the user selects an option, the browser will replace the text content of this element with the text content of the selected option.
 - `<listbox>` - The wrapper that contains the `<option>`(s) and `<optgroup>`(s). If this part was not provided by the author, then `<selectlist>` will automatically create one.
 - `<optgroup>` - Optional element which groups `<option>`(s) together with a label.
+- `<legend>` - The label for an `<optgroup>`. The `label` attribute should not be used.
 - `<option>` - Can have one or more and represents the potential values that can be chosen by the user.
 
 ## Styling selectlist
@@ -248,11 +249,11 @@ Consider the following example:
   .my-custom-select listbox {
     padding: 0;
   }
-  .my-custom-select .section {
+  .my-custom-select optgroup {
     padding: 1rem 0 0;
     background: radial-gradient(ellipse 60% 50px at center top, #000a 0%, transparent 130%);
   }
-  .my-custom-select h3 {
+  .my-custom-select legend {
     margin: 0 0 1rem 0;
     text-align: center;
     color: white;
@@ -269,19 +270,19 @@ Consider the following example:
     <button type="selectlist"></button>
   </div>
   <listbox>
-    <div class="section">
-      <h3>Flowers</h3>
+    <optgroup>
+      <legend>Flowers</legend>
       <option>Rose</option>
       <option>Lily</option>
       <option>Orchid</option>
       <option>Tulip</option>
-    </div>
-    <div class="section">
-      <h3>Trees</h3>
+    </optgroup>
+    <optgroup>
+      <legend>Trees</legend>
       <option>Weeping willow</option>
       <option>Dragon tree</option>
       <option>Giant sequoia</option>
-    </div>
+    </optgroup>
   </listbox>
 </selectlist>
 ```

@@ -14,6 +14,7 @@ const SelectAnatomy = () => {
           <Part name="listbox">
             <Slot>
               <Part name="optgroup (optional)">
+                <Part name="legend (first child)">Group label</Part>
                 <Part name="option">Option text</Part>
               </Part>
             </Slot>
